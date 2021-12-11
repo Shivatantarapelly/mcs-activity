@@ -221,7 +221,7 @@ o/p: [1,4,9]                                                                    
 35) Explain Flask and its benefits
 --> Flask is a web framework. flask allows you to build a web application by providing tools, libraries and technologies. flask has two dependencies they are:
     Werkzeug a WSGI utility library --> provides libraries
-    Jinja2 is a template engine     
+    Jinja2 is a template engine     --> template engine
 benefits:
 --> Integrated support for unit testing
 --> Built-in development server and fast debugger
@@ -232,22 +232,118 @@ benefits:
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 36) What is the difference between Django, Pyramid, and Flask?
-
+                   Django                                                                              Flask
+    -------------------------------------------------------------------------------------------------------------------------------------------------
+--> django follows MVT architecture                                          --> Flask follows no architecture
+--> django is more extensive than flask                                      --> falsk is less extensive than django
+--> easily install using pip                                                 --> can easily install using pip
+--> it uses django template                                                  --> it uses jinja2 template
+--> django uses django orm for data modeling                                 --> flask doesn't have inbuilt orm but can use any orm from outside like sqlalchemy orm.
+--> django more popular framework compared with flask                        --> flask is less popular compared with django
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 37) What is Flask-WTF and what are their features?
+--> flask-WTF is an extension installed using pip which provides a simple interface with this WTforms libraries.
+--> This is where WTForms, a flexible form, rendering and validation library comes handy
+--> Using Flask-WTF, we can define the form fields in our Python script and render them using an HTML template.
+features:
+--> Is very secure form as it comes with CSRF token
+--> Provides global CSRF protection
+--> Provides Integration with web forms
+--> Also features Recaptcha supporting
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
 38) Explain what is the common way for the Flask script to work?
+the common way for the flask script to work is:
+--> Either it should be the import path for your application
+--> Or the path to a Python file
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 39) Explain how you can access sessions in Flask?
+--> Flask-Session is an extension for Flask that support Server-side Session to your application.
+--> The Session is the time between the client logs in to the server and logs out of the server.
+--> The data that is required to be saved in the Session is stored in a temporary directory on the server.
+--> The data in the Session stored on the top of cookies and signed by the server cryptographically.
+--> Each client will have their own session there own data will be store in their session.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 40) Is Flask an MVC model, and if yes give an example showing MVC pattern for your application?
+--> Flask is a minimalistic framework which behaves same as MVC framework.So MVC is a perfect fit for Flask, and the pattern for MVC we will consider for 
+    the following example
+    from flask import Flask
+    app = Flask(_name_)
+    @app.route("/")
+    Def hello():
+    	return "Hello World"
+    app.run(debug = True)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 41) Explain database connection in Python Flask?
+--> Flask supports database-powered applications (RDBS). Such a system requires creating a schema, which requires piping the shema.sql file into a sqlite3 command. 
+    So you need to install sqlite3 command in order to create or initiate the database in Flask.
+--> Flask allows to request database in three ways
+--> before_request(): It is called before a request and pass no arguments
+--> after_request(): It is called after a request and pass the response that will be sent to the client
+--> teardown_request(): It is called in a situation when exception is raised, and response is not guaranteed. They are called after the response has been constructed.
+    They are not allowed to modify the request, and their values are ignored.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 42) If you have multiple Memcache servers, and one of them fails that contain data, will it try to get them?
+--> The data in the failed server won’t get removed, but there is a provision for auto-failure, which you can configure for multiple nodes.
+--> Fail-over can be triggered during any kind of socket or Memcached server level errors and not during normal client errors like adding an existing key, etc.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 43) Explain how you can minimize the Memcached server outages in your Python Development?
+--> When one instance fails, several of them goes down, this will put a larger load on the database server when lost data is reloaded as the client make a 
+    request. To avoid this, if your code has been written to minimize cache stampedes, then it will leave a minimal impact
+--> Another way is to bring up an instance of memcached on a new machine using the lost machine’s IP address
+--> Code is another option to minimize server outages as it gives you the liberty to change the Memcached server list with minimal work
+--> Setting timeout value is another option that some Memcached clients implement for Memcached server outage. When your Memcached server goes down,
+    the client will keep trying to send a request till the time-out limit is reached.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 44) Explain what is Dogpile effect? How can you prevent this effect?
+--> Dogpile effect is referred to the event when cache expires, and websites are hit by the multiple requests made by
+    the client at the same time. This effect can be prevented by using a semaphore lock. In this system, when the
+    value expires, the first process acquires the lock and starts generating a new value.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 45) Explain how memcached should not be used in your Python project?
+Here are the ways you should not use memcached in your Python project;
+--> Memcached common misuse is to use it as a data store and not as a cache
+--> Never use Memcached as the only source of the information you need to run your application. Data should
+    always be available through another source as well
+--> Memcached is just a key or value store and cannot perform query over the data or iterate over the contents to extract information.
+--> Memcached does not offer any form of security either in encryption or authentication.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 46) What is Python If Statement?
+--> if statements in python are used for decision making.t contains a body of code that runs only when the condition given in the if statement is true
+--> If the condition is false, then the optional else statement runs, which contains some code for the else condition.
+--> When you want to justify one condition while the other condition is not true, then you use Python if-else statement.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 47) Explain While loop in Python with example
+--> While loop does the exact same thing what “if statement” does, but instead of running the code block once, 
+    they jump back to the point where it began the code and repeat the whole process again.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 48) What is enumerate() in Python?
+--> Enumerate() in Python is a built-in function used for assigning an index to each item of the iterable object. It adds a loop on the iterable
+    objects while keeping track of the current item and returns the object in an enumerable form. This object can be used in a for loop to convert 
+    it into a list by using list() method.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 49) How can you use for loop to repeat the same statement over and again?
+--> You can use for loop for even repeating the same statement over and again. Here in the example, we have printed out the word “shiva” four times.
+    for i in '123u':
+    	print ("shiva",i,)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 50) What is Tuple Matching in Python?
+--> Tuple Matching in Python is a method of grouping the tuples by matching the second element in the tuples. It is achieved by using a dictionary 
+    by checking the second element in each tuple in python programming. However, we can make new tuples by taking portions of existing tuples.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 51) Explain Dictionary in Python with example
 52) How can you copy the entire dictionary to a new dictionary?
 53) How can you Update Python Dictionary?
