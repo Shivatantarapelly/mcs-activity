@@ -15,12 +15,8 @@ from sqlalchemy import Column, String, Integer, Boolean, engine
 
 SQLALCHEMY_DATABASE_URL = "sqlite:///data.db"
 
-# On cree la connection
-engine = create_engine(
-    SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
-)
+engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
-# Pour creer un session locale a chaque nouvelle connexion
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()

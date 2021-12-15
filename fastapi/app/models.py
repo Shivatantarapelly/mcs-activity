@@ -10,15 +10,17 @@
 #     name = Column(String, index=True)
 #     due_date = Column(String, index=True)
 #     description = Column(String, index=True)
-from sqlalchemy import Column, Integer, String
 
-from database import Base, engine
+
+from sqlalchemy import Column, Integer, String,DateTime
+
+from database import Base
 
 
 class User(Base):
     __tablename__ = "todo"
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    task = Column(String, index=True)
+    id = Column(Integer, primary_key=True,index=True)
+    task = Column(String(20))
+    date = Column(DateTime)
 
 
-Base.metadata.create_all(engine)
