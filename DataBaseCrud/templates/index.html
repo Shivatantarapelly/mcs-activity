@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="savedata" method="post">
+    {% csrf_token %}
+    Want to create new data: <br><br>
+    name:<input type="text" name="name">
+    <br><br>
+    email:<input type="email" name="email">
+    <br><br>
+    password:<input type="text" name="pwd">
+    <br><br>
+    <input type="submit" value="postdata" ><br>
+    <br>
+    <p>want the data which is stored&nbsp;&nbsp;<a href="readdata">click here</a></p>
+<!--    update it by using name:&nbsp; <input type="text" placeholder="please enter name" name="updatename">-->
+
+</form>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    {% if msg1 %}
+    {% for i in data%}
+    id:{{i.id}}<br>
+    name:{{i.name}}<br>
+    email:{{i.email}}<br>
+    password:{{i.password}}<br>
+    {% endfor%}
+    {% endif %}
+</div>
+
+<div style="text-align:center">
+    {% if msg %}
+        {% for i in data1 %}
+    <table border="3px">
+
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Password</td>
+        </tr>
+
+
+        <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.password}}</td>
+        </tr>
+
+        {% endfor %}
+        {% endif %}
+
+    </table>
+
+</div>
+<br>
+<br>
+
+<div>
+    click here to update records &nbsp;<a href="updatedata">clickhere</a>
+</div>
+
+
+</body>
+</html>
