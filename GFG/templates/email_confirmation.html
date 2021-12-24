@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>confirmmail</title>
+</head>
+<body>
+{% autoescape off %}
+
+welcome to my app
+hello {{ name }}
+Please confirm your mail by clicking on below link
+confirmation link: http://{{ domain }}{% url 'activate' uid64=uid token=token %}
+
+{% endautoescape %}
+
+</body>
+</html>
