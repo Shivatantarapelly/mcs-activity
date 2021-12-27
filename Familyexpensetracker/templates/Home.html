@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        td { 
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="" method="post">
+        {% csrf_token %}
+    <div style="margin-top : 25px; margin-left : 50px;">
+    <input type="submit" value="Admin page" name="Admin_page" formaction="admin/">
+
+    </div>
+     </form>
+    <form action="home" method="post">
+            {% csrf_token %}
+    <h1 style="text-align: center;"><u> Family Expense Tracker</u></h1>
+    <table border="1" style="width: 600px; border:1px solid black;margin-left:auto;margin-right:auto;">
+        <tr style="background-color: lightsteelblue"><b>
+            <th>Eid</th>
+            <th>Name</th>
+            <th>Purpose</th>
+            <th>Expense</th>
+            <th>Date</th>
+            <th>Edit/Delete</th>
+        </b></tr>
+        {% for i in data %}
+        <tr style="background-color: lavender">
+            <td>{{i.Eid}}</td>
+            <td>{{i.Name}}</td>
+            <td>{{i.Purpose}}</td>
+            <td>{{i.Amount}}</td>
+            <td>{{i.Date}}</td>
+            <td><button style="font-size: 5px; width: 100p;" formaction="edit/{{i.Eid}}"><i class="material-icons">border_color</i></button>&nbsp;<button style="font-size:5px" formaction="delete/{{i.Eid}}"><i class="material-icons">delete_sweep</i></button></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <div style="text-align: center; margin-top: 30px;">
+
+        <input type="submit" name="add" value="Add Expense" formaction="add" style="width: 220px; font-size: 17px; font-weight: 750; background-color: lightblue;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Add Family members" formaction="viewmember" style="width: 220px; font-size: 17px; font-weight: 750; background-color: lightblue;">
+    </div>
+    <div style="text-align: center; margin-top: 30px;">
+        <input type="submit" name="add" value="view family details" formaction="viewfamily" style="width: 220px; font-size: 17px; font-weight: 750; background-color: lightblue;">
+    </div>
+</body>

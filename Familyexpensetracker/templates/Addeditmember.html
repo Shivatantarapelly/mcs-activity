@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Edit Member</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; 
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+form {
+  display: block;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="row">
+  <div class="column" style= "text-align: center;">
+    <h2><u>Add new Member</u></h2>
+    <table>
+        <form action="addmem" method="post">
+                {% csrf_token %}
+            <fieldset style="border-color: black; background-color: lavender; margin-left: 50px; margin-right: 50px;">
+            <b>Mid: <input type="text" style="margin-top: 20px; background-color: lightyellow" name="Mid"><br>
+            <b>Name: <input type="text" style="margin-top: 10px; width: 168px;  text-align: center; background-color: lightyellow" name="Name"><br>
+            <b>Mobile no: <input type="number" style="width: 139px; margin-top: 10px; background-color: lightyellow" name="Number"><br>
+            Work: <input type="text" style="width: 170px; margin-top: 10px; background-color: lightyellow" name="Work"><br>
+            Income: <input type="number" style="width: 160px; margin-top: 10px; background-color: lightyellow" name="Income"><br>
+            <input type="submit" value="Submit" style="margin-top: 20px; margin-bottom: 20px; border-color: black; font-weight: 750; font-size: 15px; background-color: lightgrey">
+
+        </fieldset>
+       </form>
+    </table>
+  </div>
+  <div class="column" style="text-align: center;">
+    <h2><u>Edit Member</u></h2>
+    <table>
+        <form action="" method="post">
+            {% csrf_token %}
+            <fieldset style="border-color: black; background-color: lavender; margin-left: 50px; margin-right: 50px;">
+                <b>Mid: <input type="text" name="Mid" value="{{edata.Mid}}" style="margin-top: 20px; background-color: lightyellow"><br>
+                    <b>Name: <input type="text" name="Name" value="{{edata.Name}}" style="margin-top: 10px; width: 168px;  text-align: center; background-color: lightyellow"><br>
+                    <b>Mobile no: <input type="number" name="Mobile_no" value="{{edata.Mobile_no}}" style="width: 139px; margin-top: 10px; background-color: lightyellow"><br>
+                    Work: <input type="text" name="Work" value="{{edata.Work}}" style="width: 170px; margin-top: 10px; background-color: lightyellow"><br>
+                    Income: <input type="number" name="Income" value="{{edata.Income}}" style="width: 160px; margin-top: 10px; background-color: lightyellow"><br>
+                    <input type="submit" value="Submit" formaction="/updatemem/{{edata.Mid}}" style="margin-top: 20px; margin-bottom: 20px; border-color: black; font-weight: 750; font-size: 15px; background-color: lightgrey">
+        
+            </fieldset>
+       </form>
+    </table>
+
+</div>
+</div>
+
+</body>
+</html>

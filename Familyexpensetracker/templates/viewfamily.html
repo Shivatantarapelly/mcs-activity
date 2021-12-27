@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <title>View Family</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+    td {
+        text-align: center;
+    }
+    div { 
+        border: black;
+    }
+</style>
+</head>
+<body>
+    <h1 style="text-align: center;"><u> View Family numbers</u></h1>
+<div>
+    <form action="" method="post">
+        {% csrf_token %}
+    <table border="1" style="width: 600px; border:1px solid black;margin-left:auto;margin-right:auto;">
+        <tr style="background-color: lightsteelblue"><b>
+            <th>Mid</th>
+            <th>Name</th>
+            <th>Mobile no.</th>
+            <th>Work</th>
+            <th>Income</th>
+            <th>Edit/Delete</th>
+        </b></tr>
+        {% for i in data %}
+        <tr style="background-color: lavender">
+            <td>{{i.Mid}}</td>
+            <td>{{i.Name}}</td>
+            <td>{{i.Mobile_no}}</td>
+            <td>{{i.Work}}</td>
+            <td>{{i.Income}}</td>
+            <td><button style="font-size: 5px; width: 100p;" formaction="editmem/{{i.Mid}}"><i class="material-icons">border_color</i></button>&nbsp;<button style="font-size:5px" formaction="deletemem/{{i.Mid}}"><i class="material-icons">delete_sweep</i></button></td>
+        </tr>
+        {% endfor %}
+    </table>
+    </form>
+</div>
+    <form action="" method="post">
+        {% csrf_token %}
+    <div style="text-align: center; margin-top: 30px;">
+        <input type="submit" formaction="add_new_mem" value="Add New Member" style="width: 220px; font-size: 17px; font-weight: 750; background-color: lightblue;">
+        <input type="submit" value="Home" formaction="redhome" style="width: 220px; font-size: 17px; font-weight: 750; background-color: lightblue;">
+    </div>
+    </form>
+</body>

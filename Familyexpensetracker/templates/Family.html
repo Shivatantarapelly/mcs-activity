@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <title>Expenses</title>
+</head>
+<body>
+    <div>
+        <h1 style="text-align: center;"><u>Family Member Details</u></h1>
+        <table border="1" style="width: 600px; border:1px solid black;margin-left:auto;margin-right:auto;">
+            <tr style="background-color: lightsteelblue;text-align: center; "><b>
+                <th>Mid<br>int(F.k)</th>
+                <th>Name<br> varchar(40)</th>
+                <th>Mobile_no<br> varchar(40)</th>
+                <th>Work<br> varchar(40)</th>
+                <th>Income<br>int</th>
+
+            </b></tr>
+            {% for i in mdata %}
+            <tr style="background-color: lavender; text-align: center;">
+                <td>{{i.Mid}}</td>
+                <td>{{i.Name}}</td>
+                <td>{{i.Mobile_no}}</td>
+                <td>{{i.Work}}</td>
+                <td>{{i.Income}}</td>
+            </tr>
+                {% endfor %}
+    
+        </table>
+    </div>
+    <form action="" method="post">
+        {% csrf_token %}
+    <div style="text-align: center; margin-top: 30px;">
+        <input type="submit" formaction="add_new_mem" value="Add New Member" style="width: 220px; font-size: 17px; font-weight: 750; background-color: lightblue;">
+        <input type="submit" value="Home" formaction="redhome" style="width: 220px; font-size: 17px; font-weight: 750; background-color: lightblue;">
+    </div>
+    </form>
+</body>

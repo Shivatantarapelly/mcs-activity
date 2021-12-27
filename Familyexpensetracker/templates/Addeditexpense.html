@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add edit expense</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; 
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+form {
+  display: block;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="row">
+  <div class="column" style= "text-align: center;">
+    <h2><u>Add new Expenses</u></h2>
+    <table>
+        <form action="addexp" method="post">
+            {% csrf_token %}
+        <fieldset style="border-color: black; background-color: lavender; margin-left: 50px; margin-right: 50px;">
+            <b>Eid: <input type="text" style="margin-top: 20px; background-color: lightyellow" name="Eid"><br>
+            <b>Name: <select name= "Name" style="margin-top: 10px; width: 160px;  text-align: center; background-color: lightyellow">
+                <option>--select--</option>
+                {% for i in mlist %}
+                <option>{{i}}</option>
+                {% endfor %}
+            </select><br>
+            <b>Purpose: <input type="text" style="width: 148px; margin-top: 10px; background-color: lightyellow" name="Purpose"><br>
+            Amount: <input type="number" style="width: 147px; margin-top: 10px; background-color: lightyellow" name="Amount"><br>
+            Date: <input type="date" style="width: 168px; margin-top: 10px; background-color: lightyellow" name = "Date"><br>
+            <input type="submit" value="Submit" style="margin-top: 20px; margin-bottom: 20px; border-color: black; font-weight: 750; font-size: 15px; background-color: lightgrey">
+            </b>
+        </fieldset>
+        </form>
+    </table>
+  </div>
+  <div class="column" style="text-align: center;">
+    <h2><u>Edit Expense</u></h2>
+    <table>
+        <form action="/update/{{edata.Eid}}" method="post">
+            {% csrf_token %}
+            <fieldset style="border-color: black; background-color: lavender; margin-left: 50px; margin-right: 50px;">
+                <b>Eid:</b> <input type="text" name="Eid" value="{{edata.Eid}}" style="margin-top: 20px; background-color: lightyellow" ><br>
+                <b>Name:</b><input type="text" name="Name" value="{{edata.Name}}" style="width:165px;  margin-top: 20px; background-color: lightyellow">
+
+            <br>
+            <b>Purpose: <input type="text" name="Purpose" value="{{edata.Purpose}}" style="width: 148px; margin-top: 10px; background-color: lightyellow" ><br>
+            Amount: <input type="number" name="Amount" value="{{edata.Amount}}" style="width: 147px; margin-top: 10px; background-color: lightyellow" ><br>
+            Date: <input type="date" name="Date" value="{{edata.Date}}" style="width: 168px; margin-top: 10px; background-color: lightyellow" ><br>
+            <input type="submit" value="Submit" style="margin-top: 20px; margin-bottom: 20px; border-color: black; font-weight: 750; font-size: 15px; background-color: lightgrey">
+
+             </b>
+        </fieldset>
+       </form>
+    </table>
+
+</div>
+</div>
+
+</body>
+</html>
