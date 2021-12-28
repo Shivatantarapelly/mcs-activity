@@ -9,6 +9,12 @@
     </style>
 </head>
 <body>
+{% if user.is_authenticated %}
+    <p style="text-align : right;">welcome {{ user.username }}</p>
+    <p>You have successfuly logged in</p>
+    <p><a href="signout">Logout</a></p>
+    {% endif %}
+
 
     <form action="" method="post">
         {% csrf_token %}

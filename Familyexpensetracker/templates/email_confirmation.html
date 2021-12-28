@@ -1,9 +1,9 @@
 
 {% autoescape off %}
 
-welcome to my app
-hello {{ name }}
-Please confirm your mail by clicking on below link
+welcome to Family Expense Tracker app
+hello &nbsp;{{ name }}
+Please confirm your mail by clicking on below link:
 confirmation link: http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
 
 {% endautoescape %}

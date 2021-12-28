@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>loggedin</title>
+</head>
+<body>
+<h1>welcome to login page</h1>
+    {% if user.is_authenticated %}
+    <p>hello</p>
+    <p>welcome {{ user.username }}</p>
+    <p>You have successfuly logged in</p>
+    <p><a href="signout">Logout</a></p>
+    {% endif %}
+
+</body>
+</html>

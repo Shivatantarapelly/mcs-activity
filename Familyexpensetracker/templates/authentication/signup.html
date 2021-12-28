@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+</head>
+<body>
+<h1>welcome to signup page</h1>
+<form action="signup" method="post">
+    {% csrf_token %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-dismissible alert-success">
+      <button type="button" class="close" data-dismiss="alert">
+      ×
+      </button>
+      <strong>{{message}}<strong>
+    </div>
+ {% endfor %}
+{% endif %}
+    <label for=""><b>Username: </b></label>
+    <input type="text" id = "username" name="uname" placeholder="create a username (only letters and numbers)" required>
+    <br>
+    <label for=""><b>Firstname: </b></label>
+    <input type="text" style="margin-top : 10px;" id = "firstname" name="fname" placeholder="Enter your firstname" required>
+    <br>
+    <label for=""><b>lastname: </b></label>
+    <input type="text" id = "lastname" style="margin-top : 10px;" name="lname" placeholder="Enter your lastname" required>
+    <br>
+    <label for=""><b>Email address: </b></label>
+    <input type="email" id = "email" name="email" style="margin-top : 10px;" placeholder="Enter your Email Address" required>
+    <br>
+    <label for=""><b>Password: </b></label>
+    <input type="password" id = "pass1" name="pass1" style="margin-top : 10px;" placeholder="Create a Password" required>
+    <br>
+    <label for=""><b>Confirm password: </b></label>
+    <input type="password" id = "pass2" name="pass2" style="margin-top : 10px;" placeholder="Confirm your password" required>
+    <br>
+    <button type="submit" style="margin-top : 10px;"><b>Sign up</b></button>
+</form>
+</body>
+</html>
