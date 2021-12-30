@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f8d20158-f452-45a7-b15a-89dedd926944" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Books/.idea/Books.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/Book/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/Book/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/Book/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/Book/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/Book/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/Book/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/Book/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/Book/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/Book/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/Book/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/Books/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/Books/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/Books/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/Books/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/Books/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/project1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app1/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app1/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app1/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app1/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app1/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app1/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app1/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app1/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app1/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app1/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project1/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project1/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project1/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project1/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project1/wsgi.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="22zVXfb5jgTrGAoL1hiBX3Aj0Yi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Books" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f8d20158-f452-45a7-b15a-89dedd926944" name="Changes" comment="" />
+      <created>1640840443465</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640840443465</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
