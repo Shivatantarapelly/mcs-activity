@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a85f89f-19d8-44bc-98a5-3ab897e853b1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Dictionary/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../core_python/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../core_python/.idea/core_python.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../core_python/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../core_python/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../core_python/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../core_python/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../core_python/_01_arrays/_01_file.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../core_python/_01_arrays/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../project1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../project1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../unittesting/pytest_file1_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../unittesting/pytest_file1_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
