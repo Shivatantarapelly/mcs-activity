@@ -101,7 +101,7 @@ class Student:
         self.name = name
         self.grade = grade
 
-    @property       # this decorator is used to call the function as attribute out of the class
+    @property       # this decorator is used to call the method as attribute out of the class
     def msg(self):
         return self.name + " got grade " + self.grade
 
@@ -110,7 +110,7 @@ student = Student('shiva', 'A')
 student.grade = 'B'
 print('name:', student.name)
 print('grade:', student.grade)
-print('msg:', student.msg)
+print('msg:', student.msg)    # here we are calling method as attribute outside class using obj reference
 print("===================================================")
 
 
