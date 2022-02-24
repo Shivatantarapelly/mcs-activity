@@ -25,7 +25,7 @@ class ExplicitFluent:
         time.sleep(2)
         origincity.send_keys(Keys.ENTER)
         # Keys is a class by which we can handle all the keyboard buttons
-        # time.sleep(2)
+        time.sleep(2)
         arrival = driver.find_element(By.XPATH, "//input[@id='BE_flight_arrival_city']")
         # arrival.send_keys('nan')
         wait.until(EC.element_to_be_clickable((By.XPATH, "//input[@id='BE_flight_arrival_city']"))).send_keys('Nan')
