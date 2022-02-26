@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d74447fb-c5de-4a69-b557-60e120df1de6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/TestFrameworkDemo1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestFrameworkDemo1/utilities/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestFrameworkDemo1/.idea/TestFrameworkDemo1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TestFrameworkDemo1/.idea/TestFrameworkDemo1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestFrameworkDemo1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TestFrameworkDemo1/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestFrameworkDemo1/pages/search_flight_result_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestFrameworkDemo1/pages/search_flight_result_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestFrameworkDemo1/pages/yatra_launch_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestFrameworkDemo1/pages/yatra_launch_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestFrameworkDemo1/testcases/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestFrameworkDemo1/testcases/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestFrameworkDemo1/testcases/test_searchflights.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestFrameworkDemo1/testcases/test_searchflights.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +44,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Mcs/selenium" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Python.explicit_fluent_wait">
     <configuration name="autosuggest&amp;calender" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">

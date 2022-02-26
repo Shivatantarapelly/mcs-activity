@@ -10,12 +10,36 @@ class SearchFlightsResult(BaseDriver):
         super().__init__(driver)
         self.driver = driver
 
-    def filter_flights(self):
-        self.driver.find_element(By.XPATH, "//p[normalize-space()='1']").click()
-        time.sleep(4)
-        allstop = self.wait_for_presence_of_elements(By.XPATH, "//span[contains(text(),'Non Stop') or contains(text("
-                                                               "),'1 Stop') or contains(text(), '2 Stop')]")
-        for stop in allstop:
-            # print(stop.text)
-            assert stop.text == "1 Stop"
-            print("assert pass")
+    FILTER_BY_1_STOP_ICON = "//p[normalize-space()='1']"
+    FILTER_BY_2_STOP_ICON = "//p[normalize-space()='2']"
+    FILTER_BY_NON_STOP_ICON = "//p[normalize-space()='0']"
+    ALL_STOPS_LIST = "//span[contains(text(),'Non Stop') or contains(text(),'1 Stop') or contains(text(), '2 Stops')]"
+
+    def get_filter_by_one_stop_icon(self):
+        self.driver.find_element(By.XPATH, self.FILTER_BY_1_STOP_ICON).click()
+
+    def get_filter_by_two_stop_icon(self):
+        self.driver.find_element(By.XPATH, self.FILTER_BY_2_STOP_ICON).click()
+
+    def get_filter_by_non_stop_icon(self):
+        self.driver.find_element(By.XPATH, self.FILTER_BY_NON_STOP_ICON).click()
+
+    def filter_flights_by_stop(self, by_stop):
+        if by_stop == "1 Stop":
+            self.get_filter_by_one_stop_icon()
+            print("selected flights with 1 stop")
+            time.sleep(2)
+        elif by_stop == "2 Stop":
+            self.get_filter_by_two_stop_icon()
+            print("selected flights with 2 stop")
+            time.sleep(2)
+        if by_stop == "Non Stop":
+            self.get_filter_by_non_stop_icon()
+            print("selected flights with Non stop")
+            time.sleep(2)
+        else:
+            print("please provide valid filter stop")
+
+    def allstop_list(self):
+        return self.wait_for_presence_of_elements(By.XPATH, self.ALL_STOPS_LIST)
+
