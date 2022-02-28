@@ -1,11 +1,15 @@
+import logging
 import time
 
 from selenium.webdriver.common.by import By
 
 from base.base_driver import BaseDriver
+from utilities.utils import Utils
 
 
 class SearchFlightsResult(BaseDriver):
+    log = Utils.custom_logger(logLevel=logging.WARNING)
+
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
@@ -27,19 +31,18 @@ class SearchFlightsResult(BaseDriver):
     def filter_flights_by_stop(self, by_stop):
         if by_stop == "1 Stop":
             self.get_filter_by_one_stop_icon()
-            print("selected flights with 1 stop")
+            self.log.warning("selected flights with 1 stop")
             time.sleep(2)
         elif by_stop == "2 Stop":
             self.get_filter_by_two_stop_icon()
-            print("selected flights with 2 stop")
+            self.log.warning("selected flights with 2 stop")
             time.sleep(2)
         if by_stop == "Non Stop":
             self.get_filter_by_non_stop_icon()
-            print("selected flights with Non stop")
+            self.log.warning("selected flights with Non stop")
             time.sleep(2)
         else:
-            print("please provide valid filter stop")
+            self.log.warning("please provide valid filter stop")
 
     def allstop_list(self):
         return self.wait_for_presence_of_elements(By.XPATH, self.ALL_STOPS_LIST)
-

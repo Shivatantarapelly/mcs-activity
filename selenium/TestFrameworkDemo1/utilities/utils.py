@@ -1,3 +1,6 @@
+import inspect
+import logging
+
 import softest as softest
 
 
@@ -12,3 +15,14 @@ class Utils(softest.TestCase):
                 print("aasert fail")
         self.assert_all()
 
+# creating the custom logger
+
+    def custom_logger(logLevel = logging.DEBUG):
+        logger_name = inspect.stack()[1][3]
+        logger = logging.getLogger(logger_name)
+        logger.setLevel(logLevel)
+        fh = logging.FileHandler("automation.log", 'w')
+        formatter = logging.Formatter("%(asctime)s - %(levelname)s : %(message)s", datefmt="%d/%m/%Y %I:%M:%S %p")
+        fh.setFormatter(formatter)
+        logger.addHandler(fh)
+        return logger

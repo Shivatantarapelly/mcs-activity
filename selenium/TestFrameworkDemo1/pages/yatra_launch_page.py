@@ -1,3 +1,4 @@
+import logging
 import time
 
 from selenium.webdriver import Keys
@@ -5,9 +6,12 @@ from selenium.webdriver.common.by import By
 
 from base.base_driver import BaseDriver
 from pages.search_flight_result_page import SearchFlightsResult
+from utilities.utils import Utils
 
 
 class LaunchPage(BaseDriver):
+    log = Utils.custom_logger(logLevel=logging.INFO)
+
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
@@ -56,8 +60,10 @@ class LaunchPage(BaseDriver):
 
     def enter_going_to_place(self, goingto):
         self.get_going_to_field().click()
+        self.log.info("clicked on going to")
         time.sleep(1)
         self.get_going_to_field().send_keys(goingto)
+        self.log.info("typed text into going to field successfully")
         time.sleep(1)
         search_result = self.get_going_to_places_list()
         for place in search_result:

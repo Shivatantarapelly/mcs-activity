@@ -1,0 +1,25 @@
+DEBUG:root:the addition of number is:8 
+INFO:root:the addition of number is:8 
+WARNING:root:the addition of number is:8 
+ERROR:root:the addition of number is:8 
+CRITICAL:root:the multiplication of number is:15 
+2022-02-28 14:25:04,004 - DEBUG : the addition of number is:8 
+2022-02-28 14:25:04,004 - INFO : the addition of number is:8 
+2022-02-28 14:25:04,005 - WARNING : the addition of number is:8 
+2022-02-28 14:25:04,005 - ERROR : the addition of number is:8 
+2022-02-28 14:25:04,005 - CRITICAL : the multiplication of number is:15 
+02282022 02:46:34 PM - DEBUG : the addition of number is:8 
+02282022 02:46:34 PM - INFO : the addition of number is:8 
+02282022 02:46:34 PM - WARNING : the addition of number is:8 
+02282022 02:46:34 PM - ERROR : the addition of number is:8 
+02282022 02:46:34 PM - CRITICAL : the multiplication of number is:15 
+28/47/2022 02:47:28 PM - DEBUG : the addition of number is:8 
+28/47/2022 02:47:28 PM - INFO : the addition of number is:8 
+28/47/2022 02:47:28 PM - WARNING : the addition of number is:8 
+28/47/2022 02:47:28 PM - ERROR : the addition of number is:8 
+28/47/2022 02:47:28 PM - CRITICAL : the multiplication of number is:15 
+28/02/2022 02:48:11 PM - DEBUG : the addition of number is:8 
+28/02/2022 02:48:11 PM - INFO : the addition of number is:8 
+28/02/2022 02:48:11 PM - WARNING : the addition of number is:8 
+28/02/2022 02:48:11 PM - ERROR : the addition of number is:8 
+28/02/2022 02:48:11 PM - CRITICAL : the multiplication of number is:15 
