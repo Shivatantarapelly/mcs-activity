@@ -4,6 +4,7 @@ import utils
 import schemas
 from database import Base, engine
 from dependencies import get_db
+import uvicorn
 
 app = FastAPI(title="todo api")
 
@@ -43,3 +44,7 @@ def update_task(task_id: int, task: str, db: Session = Depends(get_db)):
 def delete_task(task_id: int, db: Session = Depends(get_db)):
     db_todo = utils.delete_task(db, task_id)
     return db_todo
+
+
+if __name__ == '__main__':
+    uvicorn.run(app)

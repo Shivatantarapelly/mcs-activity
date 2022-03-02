@@ -1,8 +1,10 @@
+import os
 import time
 
 import pytest
 from selenium import webdriver
 from selenium.webdriver.edge.service import Service
+from webdriver_manager import driver
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from webdriver_manager.chrome import ChromeDriverManager
 
@@ -46,4 +48,31 @@ def browser(request):
 @pytest.fixture(scope="session", autouse=True)
 def url(request):
     return request.config.getoption("--url")
+"""
+
+
+def pytest_html_report_title(report):
+    report.title = "Yatra Report"
+
+# he below lines is for scrennshot when test case fails
+"""
+@pytest.hookimpl(hookwrapper=True)
+def pytest_runtest_makereport(item, call):
+    pytest_html = item.config.pluginmanager.getplugin("html")
+    outcome = yield
+    report = outcome.get_result()
+    extra = getattr(report, "extra", [])
+    if report.when == "call":
+        # always add url to report
+        extra.append(pytest_html.extras.url("http://www.yatra.com/"))
+        xfail = hasattr(report, "wasxfail")
+        if (report.skipped and xfail) or (report.failed and not xfail):
+            report_directory = os.path.dirname(item.config.option.htmlpath)
+            filename = str(int(round(time.time()*1000)))+ ".png"
+            destinationfile = os.path.join(report_directory,filename)
+            driver.save_screenshot(destinationfile)
+
+            # only add additional html on failure
+            extra.append(pytest_html.extras.html("<div>Additional HTML</div>"))
+        report.extra = extra
 """
